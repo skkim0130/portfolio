@@ -21,7 +21,7 @@ function History() {
             <div className={styles.content}>
               <h3 className={styles.company}>
                 {h.company}
-                <span>{h.type}</span>
+                <span className="tag">{h.type}</span>
               </h3>
               <p className={styles.team}>{h.team}</p>
               <p className={styles.part}>{h.part}</p>
