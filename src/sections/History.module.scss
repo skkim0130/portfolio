@@ -1,0 +1,103 @@
+.timeline {
+  position: relative;
+  padding: space("xxl") 0;
+  display: flex;
+  flex-direction: column;
+  gap: space(xl);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 1px;
+    background: get-color("gray-200");
+  }
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: space("md");
+  padding-left: space("xl");
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: get-color("primary");
+    border-radius: radius("full");
+  }
+}
+
+.year {
+  .txt {
+    font-size: font("md");
+    font-weight: 600;
+    color: get-color("primary");
+  }
+
+  .txtS {
+    font-size: font("sm");
+    color: get-color("gray-400");
+  }
+}
+
+.content {
+  flex: 1;
+  padding: space("md") space("lg");
+  border-radius: radius("md");
+  background: get-color("gray-50");
+  border: 1px solid get-color("gray-200");
+  display: flex;
+  flex-direction: column;
+  gap: space("sm");
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  gap: space("sm");
+  font-size: font("xl");
+  font-weight: 700;
+  color: get-color("dark");
+
+  span {
+    font-size: font("sm");
+    font-weight: 400;
+    color: get-color("gray-400");
+  }
+}
+
+.team {
+  font-size: font("md");
+  color: get-color("gray-400");
+}
+
+.part {
+  font-size: font("sm");
+  color: get-color("gray-300");
+}
+
+@media (min-width: map.get($breakpoints, "md")) {
+  .timeline::before {
+    left: 145px;
+  }
+
+  .item {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: space("xxl");
+    padding-left: 0;
+
+    &::before {
+      left: 140px;
+      top: 6px;
+    }
+  }
+}

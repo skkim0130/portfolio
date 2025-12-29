@@ -1,0 +1,55 @@
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: space("md");
+}
+
+.txtBox {
+  display: flex;
+  flex-direction: column;
+  gap: space("md");
+}
+
+.name {
+  font-size: font("xxxl");
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.role {
+  font-size: font("xl");
+  color: get-color("primary");
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  gap: space("sm");
+  font-size: font("lg");
+  color: get-color("gray-400");
+}
+
+.imgBox {
+  width: 96px;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+@media (min-width: map.get($breakpoints, "md")) {
+  .inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: space("xxl");
+  }
+
+  .txtBox {
+    width: calc(100% - 200px - #{space("xxl")});
+  }
+
+  .imgBox {
+    width: 192px;
+  }
+}

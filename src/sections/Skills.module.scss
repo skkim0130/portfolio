@@ -1,0 +1,61 @@
+@use "@/assets/scss/utils/functions" as *;
+
+.listWrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: space("lg");
+}
+
+.group {
+  padding: space("lg");
+  border: 1px solid get-color("gray-200");
+  border-radius: radius("md");
+  background: get-color("white");
+  display: flex;
+  flex-direction: column;
+  gap: space("md");
+}
+
+.groupTitle {
+  font-size: font("lg");
+  border-bottom: 1px solid get-color("gray-200");
+  padding-bottom: space("md");
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: space("sm");
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: space("sm") space("md");
+  border-radius: radius("xl");
+  background: get-color("gray-50");
+  font-size: font("sm");
+  color: get-color("gray-400");
+  transition: background 0.2s ease, transform 0.2s ease;
+
+  svg {
+    font-size: font("lg");
+    color: get-color("primary");
+  }
+
+  &:hover {
+    background: get-color("primary");
+    color: get-color("white");
+
+    svg {
+      color: get-color("white");
+    }
+  }
+}
+
+@media (min-width: map.get($breakpoints, "md")) {
+  .listWrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

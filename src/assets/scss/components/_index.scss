@@ -1,0 +1,5 @@
+@use "sass:map";
+@use "@/assets/scss/utils/" as *;
+
+@forward "section";
+@forward "sec-title";

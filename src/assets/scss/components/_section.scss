@@ -1,0 +1,18 @@
+.sec {
+  padding: 60px space("lg");
+  scroll-margin-top: 56px;
+
+  &.over {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &:nth-of-type(even) {
+    background: get-color("gray-50");
+  }
+
+  .inner {
+    max-width: bp("xl");
+    margin: 0 auto;
+  }
+}

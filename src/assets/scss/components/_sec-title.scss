@@ -1,0 +1,26 @@
+.sec {
+  &Title {
+    text-align: center;
+    margin-bottom: space("lg");
+    white-space: pre-line;
+
+    h2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: font("xxl");
+      gap: space("sm");
+
+      i {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &Txt {
+    margin-top: space("sm");
+    font-size: font("md");
+    color: get-color("gray-400");
+    text-align: center;
+  }
+}

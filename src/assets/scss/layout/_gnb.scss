@@ -1,0 +1,68 @@
+.aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  background: get-color("white");
+  border-left: 1px solid get-color("gray-200");
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+  padding: space("xl") space("lg");
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 2000;
+  flex-direction: column;
+
+  ul {
+    margin-top: space("xxl");
+    display: flex;
+    flex-direction: column;
+    gap: space("lg");
+
+    li a {
+      font-size: 40px;
+      font-weight: 400;
+      color: get-color("gray-500");
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: get-color("primary");
+      }
+    }
+  }
+
+  &.open {
+    display: flex;
+    transform: translateX(0);
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: get-color("gray-500");
+
+  &:hover {
+    color: get-color("primary");
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: get-color("gray-500");
+  opacity: 0.4;
+  z-index: 2;
+}
+
+@media (min-width: bp("md")) {
+  .aside {
+    width: 50%;
+    max-width: 300px;
+  }
+}
