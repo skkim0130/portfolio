@@ -1,6 +1,6 @@
 .timeline {
   position: relative;
-  padding: space("xxl") 0;
+  padding-bottom: space("xl");
   display: flex;
   flex-direction: column;
   gap: space(xl);
@@ -12,7 +12,7 @@
     bottom: 0;
     left: 20px;
     width: 1px;
-    background: get-color("gray-200");
+    background: get-color("gray-300");
   }
 }
 
@@ -32,10 +32,15 @@
     height: 12px;
     background: get-color("primary");
     border-radius: radius("full");
+    box-shadow: 0 0 0 4px rgba(0, 71, 171, 0.1);
   }
 }
 
 .year {
+  display: flex;
+  flex-direction: column;
+  gap: space("xs");
+
   .txt {
     font-size: font("md");
     font-weight: 600;
@@ -44,7 +49,7 @@
 
   .txtS {
     font-size: font("sm");
-    color: get-color("gray-400");
+    color: get-color("gray-500");
   }
 }
 
@@ -52,39 +57,43 @@
   flex: 1;
   padding: space("md") space("lg");
   border-radius: radius("md");
-  background: get-color("gray-50");
+  background: get-color("white");
   border: 1px solid get-color("gray-200");
   display: flex;
   flex-direction: column;
   gap: space("sm");
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 .company {
   display: flex;
   align-items: center;
   gap: space("sm");
-  font-size: font("xl");
+  font-size: font("lg");
   font-weight: 700;
   color: get-color("dark");
 
-  span {
-    font-size: font("sm");
-    font-weight: 400;
-    color: get-color("gray-400");
-  }
+  // span {
+  //   font-size: font("sm");
+  //   font-weight: 500;
+  //   color: get-color("primary");
+  //   background-color: rgba(0, 71, 171, 0.08);
+  //   padding: space("xs");
+  //   border-radius: 3px;
+  // }
 }
 
 .team {
   font-size: font("md");
-  color: get-color("gray-400");
+  color: get-color("gray-500");
 }
 
 .part {
   font-size: font("sm");
-  color: get-color("gray-300");
+  color: get-color("gray-400");
 }
 
-@media (min-width: map.get($breakpoints, "md")) {
+@media (min-width: bp("md")) {
   .timeline::before {
     left: 145px;
   }

@@ -1,5 +1,3 @@
-@use "@/assets/scss/utils/functions" as *;
-
 .listWrap {
   display: grid;
   grid-template-columns: 1fr;
@@ -54,7 +52,7 @@
   }
 }
 
-@media (min-width: map.get($breakpoints, "md")) {
+@media (min-width: bp("md")) {
   .listWrap {
     grid-template-columns: repeat(3, 1fr);
   }

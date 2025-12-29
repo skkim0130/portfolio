@@ -11,22 +11,37 @@
 }
 
 .name {
-  font-size: font("xxxl");
+  font-size: font("xxl");
   font-weight: 700;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
+  color: get-color("dark");
+
+  &:after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: get-color("primary");
+    margin-top: space("sm");
+    border-radius: 3px;
+  }
 }
 
 .role {
-  font-size: font("xl");
+  font-weight: 500;
   color: get-color("primary");
+  letter-spacing: -0.2px;
+  margin-top: 6px;
 }
 
 .desc {
   display: flex;
   flex-direction: column;
-  gap: space("sm");
-  font-size: font("lg");
+  gap: space("xs");
+  font-size: 15px;
+  line-height: 24px;
   color: get-color("gray-400");
+  margin-top: space("xs");
 }
 
 .imgBox {
@@ -37,7 +52,26 @@
   }
 }
 
-@media (min-width: map.get($breakpoints, "md")) {
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: space("xs");
+
+  a {
+    display: inline-flex;
+    gap: 2px;
+    align-items: center;
+    font-size: font("md");
+    text-decoration: underline;
+    color: get-color("gray-400");
+
+    &:hover {
+      color: get-color("primary");
+    }
+  }
+}
+
+@media (min-width: bp("md")) {
   .inner {
     flex-direction: row;
     align-items: center;

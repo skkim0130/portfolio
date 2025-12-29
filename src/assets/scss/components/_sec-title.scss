@@ -1,7 +1,9 @@
+@use "@/assets/scss/utils" as *;
+
 .sec {
   &Title {
     text-align: center;
-    margin-bottom: space("lg");
+    margin-bottom: space("xl");
     white-space: pre-line;
 
     h2 {
@@ -20,6 +22,7 @@
   &Txt {
     margin-top: space("sm");
     font-size: font("md");
+    line-height: 20px;
     color: get-color("gray-400");
     text-align: center;
   }

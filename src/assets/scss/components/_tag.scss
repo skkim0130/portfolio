@@ -1,0 +1,12 @@
+@use "@/assets/scss/utils" as *;
+
+.tag {
+  display: inline-block;
+  padding: space("xs");
+  line-height: 100%;
+  font-size: 11px;
+  font-weight: 500;
+  color: get-color("primary");
+  background-color: rgba(0, 71, 171, 0.08);
+  border-radius: 3px;
+}
