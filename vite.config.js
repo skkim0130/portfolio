@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  base: "/sk-portfolio-react/", // project name
+  base: "/portfolio/", // project name
   plugins: [react()],
   resolve: {
     alias: {
